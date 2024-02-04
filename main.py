@@ -10,7 +10,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForms, LoginForms, CommentForms
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ["secret_key"]
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
